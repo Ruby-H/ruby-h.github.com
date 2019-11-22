@@ -2,7 +2,7 @@
 layout: post
 title:  "Joint Adaptation Networks"
 date:   2019-11-22 19:46:21 +0800
-tags: "joint adaptation networks"
+tags: "joint_adaptation_networks"
 color: rgb(255,90,90)
 cover: '../assets/JAN.png'
 subtitle: 'Joint distribution adaptation'
