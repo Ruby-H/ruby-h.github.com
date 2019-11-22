@@ -7,7 +7,7 @@ url: 'https://ruby-h.github.io' # your host
 # nav 中文字符空格：&emsp;
 nav: # 最佳体验 六个标签 且最好每个标签不超过4中文字
   首页: '/'
-  标签: '/tags.html'
+  #标签: '/tags.html'
   时间线: '/timeline.html'
   关于博主: '/about.html'
   友情链接: '/friendLink.html'
@@ -25,9 +25,9 @@ portraits: '/assets/pika.jpeg' # your portraits image file path
 # SNS
 SNS: true
 SNS-icon: #['Facebook', 'weibo', 'qq', 'github', 'Dribbble', 'Twitter', 'instagram', 'weixin', 'Codepen']
-  mail: 'NingyuHe_ruby@163.com'
+  mail: 'mailto:NingyuHe_ruby@163.com'
   weixin: '' # 你的微信二维码存放的地址
-  qq: '743895461' # 你的qq二维码存放的地址 or http://wpa.qq.com/msgrd?v=3&uin='你的QQ号'&site=qq&menu=yes
+  qq: 'http://wpa.qq.com/msgrd?v=3&uin='743895461'&site=qq&menu=yes' # 你的qq二维码存放的地址 or http://wpa.qq.com/msgrd?v=3&uin='你的QQ号'&site=qq&menu=yes
   github: 'Ruby-H'
   Codepen: ''
   weibo: ''
