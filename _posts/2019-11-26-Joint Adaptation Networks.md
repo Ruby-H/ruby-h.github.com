@@ -6,7 +6,7 @@ excerpt_separator: <!--more-->
 article_header:
   type: cover
   image:
-    src: /assets/images/papers/JAN.png
+    src: /assets/images/background/Moonlight.jpg
 ---
 
 摘要：
