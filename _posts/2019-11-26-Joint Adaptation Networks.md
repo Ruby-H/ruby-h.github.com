@@ -3,7 +3,6 @@ title: Joint Adaptation Networks
 tags: JAN
 show_author_profile: true
 excerpt_separator: <!--more-->
-excerpt_type: html
 article_header:
   type: cover
   image:
