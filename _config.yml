@@ -22,8 +22,7 @@ url     : # the base hostname & protocol for your site e.g. https://www.someone.
 baseurl : # does not include hostname
 title   : Notebooks
 description: > # this means to ignore newlines until "Language & timezone"
-Struggling with me! Here are the reading notes of Deep Learning and Transfer Learning.
-
+ Struggling with me! Here are the reading notes of Deep Learning and Transfer Learning.
 
 ## => Language and Timezone
 ##############################
