@@ -1,6 +1,8 @@
 ---
 title: Joint Adaptation Networks
 tags: JAN
+show_author_profile: true
+show_subscribe: flase
 article_header:
   type: cover
   image:
