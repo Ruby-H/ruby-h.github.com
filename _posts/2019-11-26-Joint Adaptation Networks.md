@@ -2,6 +2,7 @@
 title: Joint Adaptation Networks
 tags: JAN
 show_author_profile: true
+mathjax: true
 excerpt_separator: <!--more-->
 article_header:
   type: cover
