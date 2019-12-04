@@ -23,4 +23,7 @@ article_header:
 网络结构如下图，文中使用的深度卷积网络包括AlexNet和ResNet。基于前人的研究可知，卷基层可以学习跨域的通用特征，因此，在将预训练的深度模型从源域转移到目标域时，我们选择微调卷基层特征。然而，深层特征虽然可以减少域分布的差异。文章以AlexNet为例，特征分布$${P{ \left( {X\mathop{{}}\nolimits^{{s}}} \right) }}$$和$${Q{ \left( {X\mathop{{}}\nolimits^{{t}}} \right) }}$$的偏移主要出现在特征层fc6和fc7，而标签分布$${P{ \left( {Y\mathop{{}}\nolimits^{{s}}} \right) }}$$和$${Q{ \left( {Y\mathop{{}}\nolimits^{{t}}} \right) }}$$主要出现在fc8。所以文章启用一种无监督的领域自适应来对原始联合分布（仅使用对应层中的联合分布）进行匹配。 
 ![Image](/assets/images/papers/JAN.png){:.border}
 
-许多现有方法是通过将目标误差，源误差以及源域$${P{ \left( {X\mathop{{}}\nolimits^{{s}}} \right) }}$$目标域$${Q{ \left( {X\mathop{{}}\nolimits^{{t}}} \right) }}$$之间的边缘分布差异相加，来解决迁移学习的问题。而最大均值误差（MMD）是作为最广泛使用的样本检验统计量来衡量$${P{ \left( {X\mathop{{}}\nolimits^{{s}}} \right) }}$$和$${Q{ \left( {X\mathop{{}}\nolimits^{{t}}} \right) }}$$间的差异。
+源域和目标域的采样分别来自分布$${P{ \left( {X,Y} \right) }}$$和$${Q{ \left( {X,Y} \right) }}$$，且$${P \neq Q}$$。本文的目的就是构建一个深度网络，来减少联合分布之间的差异，并能学习可迁移的特征和分类器。一般来说分布的差异来自边缘分布的差异（$${P{ \left( {X} \right) } \neq Q{ \left( {X} \right) }}$$）和条件分布的差异（$${P{ \left( {Y} \left| {X} \right) \right. } \neq Q{ \left( {Y} \left| {X} \right) \right. }}$$）。
+
+许多现有方法是通过将目标误差，源误差以及源域$${P{ \left( {X\mathop{{}}\nolimits^{{s}}} \right) }}$$目标域$${Q{ \left( {X\mathop{{}}\nolimits^{{t}}} \right) }}$$之间的边缘分布差异相加，来解决迁移学习的问题。而最大均值误差（MMD）是作为最广泛使用的样本检验统计量来衡量$${P{ \left( {X\mathop{{}}\nolimits^{{s}}} \right) }}$$和$${Q{ \left( {X\mathop{{}}\nolimits^{{t}}} \right) }}$$间的差异。但由于这些统计量是针对边缘分布定义的，所以仅适用于协变量适应问题（covariate shift adaptation problems）。
+
