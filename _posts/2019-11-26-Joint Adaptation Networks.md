@@ -28,3 +28,10 @@ article_header:
 
 许多现有方法是通过将目标误差，源误差以及源域$$P(X^s)$$目标域$$Q(X^t)$$之间的边缘分布差异相加，来解决迁移学习的问题。而最大均值误差（MMD）是作为最广泛使用的样本检验统计量来衡量$$P(X^s)$$和$$Q(X^t)$$间的差异。但由于这些统计量是针对边缘分布定义的，所以仅适用于协变量适应问题（covariate shift adaptation problems）。
 
+在此文章中，作者基于核嵌入分布理论（kernel embedding of distributions）提出了一种直接测量联合分布$$P(X,Y)$$和$$Q(X,Y)$$之间差异的方法。文中使用最大平均差异（MMD）来计算边缘分布间的差异，再用一种新颖的联合分布差异（Joint Distribution Discrepancy）来测量联合分布间的差异。文章的主要工作就在于提出这个指标，这指标作为再生希尔伯特空间（RKHS）下的联合分布的内核嵌入之间的平方距离，公式如下。
+
+$$D(P,Q)=||C_{\phi,\varphi}(P)-C_{\phi,\varphi}(Q)||_H^2$$
+
+文章将此指标应用在常见的AlexNet，GoogleNet网络的指定层，如下图中，并在Office-31和ImageCLFF-DA的数据集下做了实验，得到了较好的迁移结果。
+
+![Image](/assets/images/papers/JAN2.png){:.border}
