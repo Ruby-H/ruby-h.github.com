@@ -7,7 +7,7 @@ excerpt_separator: <!--more-->
 article_header:
   type: cover
   image:
-    src: /assets/images/background/Milotic.jpg
+    src: /assets/images/background/grass.jpg
 ---
 
 摘要：
