@@ -12,7 +12,7 @@ article_header:
 
 摘要：
 
-在基于深度学习的机器侦听领域中，一大问题便是当使用未训练过的场景数据时会导致性能的下降。在此文中，文章针对声学场景分类（acoustic scene classification），提出了基于$$HDeltaH$$距离的理论模型和先前针对ASC无监督域自适应的对抗性判别式深度学习方法，并提出了一种使用Wasserstein距离的基于对抗性训练的方法。
+在基于深度学习的机器侦听领域中，一大问题便是当使用未训练过的场景数据时会导致性能的下降。在此文中，文章针对声学场景分类（acoustic scene classification），提出了基于$$H \Delta H$$距离的理论模型和先前针对ASC无监督域自适应的对抗性判别式深度学习方法，并提出了一种使用Wasserstein距离的基于对抗性训练的方法。
 
 <!--more-->
 
@@ -37,3 +37,7 @@ article_header:
 $$\epsilon_T(h,f_T)\leq\epsilon_S(h,f_S)+\frac{1}{2}d_{H \Delta H}(Z_S,Z_T)+\lambda$$
 
 其中
+
+$$\lambda=\epsilon_S(h^\ast,f_S)+\epsilon_T(h^\ast,f_T)$$
+
+$$h^\ast=argmin\limits_{h\in H}(\epsilon_S(h,f_S)+\epsilon_T(h,f_T))$$
