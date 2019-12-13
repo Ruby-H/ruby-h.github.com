@@ -30,3 +30,10 @@ article_header:
 
 3、和先前的方法相比，显著提高了ASC无监督对抗迁移的性能。
 
+算法理论及思路：
+
+先建立关于source（S）和target（T）之间的差异指标$$d_{HDeltaH}$$，并将其引入在后续对域迁移的工作中，给其设置了一个上限
+
+$$\epsilon_T(h,f_T)\leq\epsilon_S(h,f_S)+\frac{1}{2}d_{HDeltaH}(Z_S,Z_T)+\lambda$$
+
+其中
