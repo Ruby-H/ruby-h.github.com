@@ -26,3 +26,12 @@ article_header:
 
 GMM模型模型的输入特征是13维的梅尔频率倒谱系数（MFCCs）和3维高音特征（pitch features）。语法解析器通常使用的是感性线性预测系数（PLP）。时延神经网络（TDNN）的输入则是39维的MFCCs和4维的pitch features，其中还包括对每个帧输入的100维i矢量。文章还分别伪普通话数据集和广东话数据集分别设计训练了特征提取器。
 
+模型结构：
+
+语音模型包括两阶段：一个GMM-HMM模型，一个TDNN-LSTM模型。具体的模型结果如下两图。
+
+![Image](/assets/images/papers/GMM-HMM.png){:.border}
+
+![Image](/assets/images/papers/TDNN-LSTM.png){:.border}
+
+主体网络没什么特别之处，迁移也做的比较简单，仅仅只是fix了前几层的参数，调整了学习率。
