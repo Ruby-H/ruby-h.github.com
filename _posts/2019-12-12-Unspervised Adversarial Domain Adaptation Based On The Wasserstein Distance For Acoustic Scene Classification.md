@@ -61,7 +61,7 @@ $$h^\ast=\mathop{argmin}\limits_{h\in H}(\epsilon_S(h,f_S)+\epsilon_T(h,f_T))$$
 
 其次，训练最小化$$d_{H \Delta H}(M_S(x_s),M_T(x_t))$$，并运用对抗策略：一方面优化$$h_d$$(分类器)在$$M_T$$后的输出，一方面使domain classifier error最大。即和GAN loss一样，转化为最优化问题：
 
-\mathop{min}\limits_{h_d}\mathop{max}\limits_{M_T}L_GAN(h_d,M_T)
+\mathop{min}\limits_{h_d} \mathop{max}\limits_{M_T} L_GAN(h_d,M_T)
 
 然而，解这个最优化问题会引起常见的计算方面的问题，包括：梯度消失和训练进程缓慢等。
 
