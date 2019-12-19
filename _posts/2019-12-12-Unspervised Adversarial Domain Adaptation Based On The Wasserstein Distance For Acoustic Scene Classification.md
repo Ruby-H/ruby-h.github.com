@@ -59,10 +59,6 @@ $$h^\ast=\mathop{argmin}\limits_{h\in H}(\epsilon_S(h,f_S)+\epsilon_T(h,f_T))$$
 
 首先，特征提取器$$M_S$$从source中训练，并复制一份$$M_T=M_S$$用于target域中。
 
-其次，训练最小化$$d_{H \Delta H}(M_S(x_s),M_T(x_t))$$，并运用对抗策略：一方面优化$$h_d$$(分类器)在$$M_T$$后的输出，一方面使domain classifier error最大。即和GAN loss一样，转化为最优化问题：
-
-\mathop{min}\limits_{h_d} \mathop{max}\limits_{M_T} L_GAN(h_d,M_T)
-
-然而，解这个最优化问题会引起常见的计算方面的问题，包括：梯度消失和训练进程缓慢等。
+其次，训练最小化$$d_{H \Delta H}(M_S(x_s),M_T(x_t))$$，并运用对抗策略：一方面优化$$h_d$$(分类器)在$$M_T$$后的输出，一方面使domain classifier error最大。即和GAN loss一样，转化为最优化问题。然而，解这个最优化问题会引起常见的计算方面的问题，包括：梯度消失和训练进程缓慢等。
 
 本文主要应用的网络是DNN和WGAN，其中包含特征提取器$$M$$，label classifier $$h$$和domain classifier $$h_d$$。这里应用wasserestein距离$$W$$来作为衡量$$Z_S$$和$$Z_T$$间的区别，相比之前的$$H \Delta H$$距离，能避免上述在计算上遇到的问题，因为wasserestein距离是$$Z$$空间上的弱拓扑，有许多收敛模式：比如smooth convergence和 point-wise convergence。
